@@ -28,7 +28,7 @@ let names = entrepreneurs.map(e => e.first + " " + e.last);
 console.log("Prénom et nom:", names);
 
 // Âge actuel
-let ages = entrepreneurs.map(e => ({...e, age: 2023 - e.year}));
+let ages = entrepreneurs.map(e => ({...e, age: 2024 - e.year}));
 console.log("Âge actuel de chaque entrepreneur:", ages);
 
 // Tri par nom de famille
