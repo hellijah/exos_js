@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercices JavaScript</title>
+</head>
+<body>
+  <h1>Exercices JavaScript</h1>
+  <p>Cliquer sur un bouton pour exécuter le script correspondant :</p>
+
+  <button onclick="chargerScript('script_1.js')">EXO 1 - Hello World</button>
+  <button onclick="chargerScript('script_2.js')">Exo 2 - Calculs rapides</button>
+  <button onclick="chargerScript('script_3.js')">Exo 3 - Pyramide de Mario</button>
+  <button onclick="chargerScript('script_4.js')">Exo 4 - Startup Nation</button>
+  <button onclick="chargerScript('script_5.js')">Exo 5 - Bibliothécaire</button>
+  <button onclick="chargerScript('script_6.js')">Exo 6 - Acides Aminés</button>
+  <button onclick="chargerScript('script_7.js')">Exo 7 - Acné Bot</button>
+
+  <script>
+    function chargerScript(nomDuScript) {
+      // Supprime tout script précédent
+      const ancienScript = document.getElementById("scriptActuel");
+      if (ancienScript) {
+        ancienScript.remove();
+      }
+
+      // Charge le nouveau script
+      const script = document.createElement("script");
+      script.src = nomDuScript;
+      script.id = "scriptActuel";
+      document.body.appendChild(script);
+    }
+  </script>
+</body>
+</html>
